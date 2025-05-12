@@ -3,32 +3,40 @@ using System.Transactions;
 
 namespace series_analyzer
 {
-    public class Program
-
+    public class Program()
     {
-        static int option;
-        static List<int> numbers = new List<int>(); // initializer an emtpy list for use in the functions bellow.
-
         public static void Main(string[] args)
         {
-          
-
             void Menu()
             {   
-                option=0; // user's menu selection ( initialized to zero).
+                int option=0; // user's menu selection ( initialized to zero).
                 while (option!=9) //ensure the loop runs as long as the user dosen't press 9 (exit).
                 {
                     option =  ShowMenu(); // gets the number of user's choise from the menu.
 
+                    List<int> numbers = new List<int>(); // initializer an emtpy list for use in the functions bellow.
 
 
 
                     switch (option) //we call functions based on user's chois
                     {
                         case 1:
-                             Starthandling();
-                         //if user's chois is 1(to enter a new serie) the program will reshow the menu and gets rhe option
+                            Console.WriteLine("to start the procses pleas enter a seryes of numbers you want to analyze.");
+                            string userInput=Console.ReadLine();
+                            bool Isvalid=ValidateInput(userInput);  //validats if user input contains only integer
+                            if (Isvalid) 
+                            {
+                                 numbers = ConvertToListOfInt(userInput);// convert the input to list of integers  to manipulate the list in the functions
+                                 option =ShowMenu(); //if user's chois is 1(to enter a new serie) the program will reshow the menu and gets rhe option
 
+                            }
+
+                            else 
+                            {
+                                    Console.WriteLine("Invalide you have to enter numbers only");
+                                    option=ShowMenu();
+                            }
+                           
                             break;
 
                         case 2:
@@ -74,28 +82,6 @@ namespace series_analyzer
 
 
             }
-
-
-
-
-            
-            void Starthandling()
-            {
-                Console.WriteLine("to start the procses pleas enter a seryes of numbers you want to analyze.");
-                string userInput=Console.ReadLine();
-                // bool Isvalid=ValidateInput(userInput);  //validats if user input contains only integer
-                // if (Isvalid) 
-                
-                numbers = ConvertToListOfInt(userInput);// convert the input to list of integers  to manipulate the list in the functions
-              
-                        // Console.WriteLine("Invalide input, you have to enter numbers only");
-                    
-            
-                
-            
-        
-            } 
-
 
             bool ValidateInput(string input)
             {
@@ -208,7 +194,9 @@ namespace series_analyzer
 
 
 
-       
+        List<int>tast=ConvertToListOfInt("12345");
+        DisplayInOder(tast);
+
         Menu();
         
 
