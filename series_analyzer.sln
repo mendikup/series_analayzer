@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "series_analyzer", "series_analyzer.csproj", "{F18A0A72-1D49-44BC-BBF5-3718E58B322A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F18A0A72-1D49-44BC-BBF5-3718E58B322A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F18A0A72-1D49-44BC-BBF5-3718E58B322A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F18A0A72-1D49-44BC-BBF5-3718E58B322A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F18A0A72-1D49-44BC-BBF5-3718E58B322A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A958BD0-0C6E-4C9F-B3D6-8FAD44C089C2}
+	EndGlobalSection
+EndGlobal
